@@ -1,4 +1,3 @@
-# Kowalski Paweł, nr albumu 167013
 
 """ 
 Funkcja zip() zwraca obiekt zip, który jest iteratorem krotek, gdzie pierwszy element z każdego przekazanego iteratora jest parowany razem,
@@ -21,9 +20,6 @@ https://docs.python.org/3/library/random.html
 
 ZeroDivisionError - wyjątek zgłaszany, gdy dokonywane jest dzielenie jakiejś liczby przez 0.
 https://docs.python.org/3/library/exceptions.html#ZeroDivisionError
-
-Link do repozytorium z zadaniem:
-https://github.com/Aksymand1/WSB-Python/tree/main/zadanie_1
 """
 
 # Przykład użycia funkcji zip() i wykorzystanie modułu random do wygenerowania dwóch list o różnych długościach
