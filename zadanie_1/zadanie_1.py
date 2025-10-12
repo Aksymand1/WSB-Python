@@ -24,9 +24,7 @@ ZeroDivisionError - wyjątek zgłaszany, gdy dokonywane jest dzielenie jakiejś 
 https://docs.python.org/3/library/exceptions.html#ZeroDivisionError
 """
 
-
-
-# Przykład użycia funkcji zip()
+# Przykład użycia funkcji zip() i wykorzystanie modułu random do wygenerowania dwóch list o różnych długościach
 import random
 
 random_list1 = [random.randint(1, 100) for _ in range(10)]
@@ -38,4 +36,13 @@ print(f"Random list 2: {random_list2}")
 print(f"Zipped list: {zipped_list}") # długość listy z mniejszą ilością elementów decyduje o długości nowej listy
 
 
+a1, a2, a3, a4, a5 = [float(x) for x in input("Podaj 5 wartości oddzielonych spacjami: ").split()]
+
+try:
+    if a5 == 0:
+        raise ZeroDivisionError('Nie można dzielić przez 0!')
+    result = (((a1 + a2) * a3) - a4) / a5
+    print(f"Wynik działania jest równy: {result:.3f}")
+except ZeroDivisionError as e:
+    print(e)
 
