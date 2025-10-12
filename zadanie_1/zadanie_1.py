@@ -1,5 +1,4 @@
 # Kowalski Paweł, nr albumu 167013
-# Zadanie 1: Tworzenie i łączenie list
 
 """ 
 Funkcja zip() zwraca obiekt zip, który jest iteratorem krotek, gdzie pierwszy element z każdego przekazanego iteratora jest parowany razem,
