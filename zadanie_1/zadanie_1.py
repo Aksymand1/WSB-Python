@@ -13,7 +13,18 @@ https://www.w3schools.com/python/ref_func_enumerate.asp#gsc.tab=0
 Funkcja sorted() zwraca posortowaną listę z podanego iterowalnego obiektu. Można posortować rosnąco lub malejąco.
 Stringi są sortowane alfabetycznie, liczby numerycznie. Nie można sortować list zawierających różne typy danych.
 https://www.w3schools.com/python/ref_func_sorted.asp
+
+Moduł random zawiera funkcje do generowania liczb losowych. 
+Dla liczb całkowitych istnieje jednolity wybór z zakresu.
+Dla sekwencji istnieje jednolity wybór losowego elementu, funkcja do generowania losowej permutacji listy w miejscu
+i funkcja do losowego próbkowania bez zastępowania.
+https://docs.python.org/3/library/random.html
+
+ZeroDivisionError - wyjątek zgłaszany, gdy dokonywane jest dzielenie jakiejś liczby przez 0.
+https://docs.python.org/3/library/exceptions.html#ZeroDivisionError
 """
+
+
 
 # Przykład użycia funkcji zip()
 import random
@@ -24,4 +35,7 @@ random_list2 = [random.randint(1, 100) for _ in range(9)]
 zipped_list = list(zip(random_list1, random_list2))
 print(f"Random list 1: {random_list1}")
 print(f"Random list 2: {random_list2}")
-print(f"Zipped list: {zipped_list}")
+print(f"Zipped list: {zipped_list}") # długość listy z mniejszą ilością elementów decyduje o długości nowej listy
+
+
+
