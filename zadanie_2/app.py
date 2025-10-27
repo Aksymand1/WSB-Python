@@ -73,3 +73,18 @@ try:
     print(f"Lista po wstawieniu liczb: {lst}")
 except Exception as e:
     print(f"Wystąpił błąd: {e}")
+    
+print('\n' + '='* 60 + '\n')
+
+#Funkcja konwertująca daty na inny format
+def convert_date_format(date_str):
+    try:
+        day, month, year = date_str.split('-')
+        return f"{year}/{month}/{day}"
+    except ValueError:
+        
+        return "Niepoprawny format daty"
+dates = ["25-12-2023", "01-01-2024", "invalid-date", "15-08-2023", "31-10-2023"]
+for date in dates:
+    converted_date = convert_date_format(date)
+    print(f'{converted_date}')
