@@ -1,3 +1,4 @@
+import re
 
 #Funkcja sprawdzająca czy podany tekst jest palindromem
 def palindrom(tekst):
@@ -17,3 +18,20 @@ for tekst in palindromy:
     else: 
         print(f'Podane wyrażenie: "{tekst}" nie jest palindromem.')
         
+print('\n' + '='* 60 + '\n')
+
+#Funkcja sprawdzająca poprawność adresu email
+def validate_email(email):
+    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+    if re.match(pattern, email):
+        return True
+    else:
+        return False
+    
+emails = ["example.com", "user@domain", "prawidlowy.email@domain.com",
+          "@domain.com", "mail@user@domena.com", "email-test.com", "email-test@test.domain.com"]
+for email in emails:
+    if validate_email(email):
+        print(f'Podany adres email: "{email}" jest poprawny.')
+    else:
+        print(f'Podany adres email: "{email}" jest niepoprawny.')
