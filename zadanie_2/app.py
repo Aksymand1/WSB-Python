@@ -82,8 +82,8 @@ def convert_date_format(date_str):
         day, month, year = date_str.split('-')
         return f"{year}/{month}/{day}"
     except ValueError:
-        
         return "Niepoprawny format daty"
+    
 dates = ["25-12-2023", "01-01-2024", "invalid-date", "15-08-2023", "31-10-2023"]
 for date in dates:
     converted_date = convert_date_format(date)
