@@ -15,5 +15,5 @@ for tekst in palindromy:
     if palindrom(tekst):
         print(f'Podane wyrażenie: "{tekst}" jest palindromem.')
     else: 
-        print(f'Podane wyrażenie "{tekst}" nie jest palindromem.')
+        print(f'Podane wyrażenie: "{tekst}" nie jest palindromem.')
         
