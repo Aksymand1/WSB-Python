@@ -50,8 +50,8 @@ class Sphere:
         volume = (4/3) * pi * (radius ** 3)
         return volume
 
-radii = [3, 5.5, 10, 0.25, 7.8]
-for radius in radii:
+rad = [3, 5.5, 10, 0.25, 7.8]
+for radius in rad:
     volume = Sphere.sphere_volume(radius)
     print(f'Objętość kuli o promieniu {radius} wynosi: {volume:.2f}')
 
