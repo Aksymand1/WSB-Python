@@ -10,14 +10,14 @@ def palindrom(tekst):
             return False
     return True
 
-palindromy = ["Kajak", "Wół utył i ma miły tułów", "A to kanapa pana Kota",
-              "Ala ma kota", "Kobyła ma mały bok", "nie jestem palindromem"]
+# palindromy = ["Kajak", "Wół utył i ma miły tułów", "A to kanapa pana Kota",
+#               "Ala ma kota", "Kobyła ma mały bok", "nie jestem palindromem"]
 
-for tekst in palindromy:
-    if palindrom(tekst):
-        print(f'Podane wyrażenie: "{tekst}" jest palindromem.')
-    else: 
-        print(f'Podane wyrażenie: "{tekst}" nie jest palindromem.')
+# for tekst in palindromy:
+#     if palindrom(tekst):
+#         print(f'Podane wyrażenie: "{tekst}" jest palindromem.')
+#     else: 
+#         print(f'Podane wyrażenie: "{tekst}" nie jest palindromem.')
         
 print('\n' + '='* 60 + '\n')
 
@@ -29,13 +29,13 @@ def validate_email(email):
     else:
         return False
     
-emails = ["example.com", "user@domain", "prawidlowy.email@domain.com",
-          "@domain.com", "mail@user@domena.com", "email-test.com", "email-test@test.domain.com"]
-for email in emails:
-    if validate_email(email):
-        print(f'Podany adres email: "{email}" jest poprawny.')
-    else:
-        print(f'Podany adres email: "{email}" jest niepoprawny.')
+# emails = ["example.com", "user@domain", "prawidlowy.email@domain.com",
+#           "@domain.com", "mail@user@domena.com", "email-test.com", "email-test@test.domain.com"]
+# for email in emails:
+#     if validate_email(email):
+#         print(f'Podany adres email: "{email}" jest poprawny.')
+#     else:
+#         print(f'Podany adres email: "{email}" jest niepoprawny.')
 
 
 print('\n' + '='* 60 + '\n')
@@ -84,7 +84,7 @@ def convert_date_format(date_str):
     except ValueError:
         return "Niepoprawny format daty"
     
-dates = ["25-12-2023", "01-01-2024", "invalid-date", "15-08-2023", "31-10-2023"]
-for date in dates:
-    converted_date = convert_date_format(date)
-    print(f'{converted_date}')
+# dates = ["25-12-2023", "01-01-2024", "invalid-date", "15-08-2023", "31-10-2023"]
+# for date in dates:
+#     converted_date = convert_date_format(date)
+#     print(f'{converted_date}')
