@@ -1,4 +1,5 @@
 import re
+import random
 
 #Funkcja sprawdzająca czy podany tekst jest palindromem
 def palindrom(tekst):
@@ -52,6 +53,23 @@ class Sphere:
 radii = [3, 5.5, 10, 0.25, 7.8]
 for radius in radii:
     volume = Sphere.sphere_volume(radius)
-    print(f'Objętość kuli o promieniu {radius} wynosi: {volume:.4f}')
+    print(f'Objętość kuli o promieniu {radius} wynosi: {volume:.2f}')
 
+print('\n' + '='* 60 + '\n')
 
+#Funkcja wstawiająca generowane liczby do listy
+def insert_random_numbers(lst):
+    wolne_pozycje = list(range(20))
+    while len(wolne_pozycje):
+        pozycja = random.randint(0, len(wolne_pozycje) - 1)
+        lst[wolne_pozycje[pozycja]] = random.randint(0, 20)
+        print(f"Wstawiam liczbę {lst[wolne_pozycje[pozycja]]} na pozycję {wolne_pozycje[pozycja]}")
+        del wolne_pozycje[pozycja]
+        
+try:
+    lst = [0] * 20
+    print(f"Lista przed wstawianiem liczb: {lst}")
+    insert_random_numbers(lst)
+    print(f"Lista po wstawieniu liczb: {lst}")
+except Exception as e:
+    print(f"Wystąpił błąd: {e}")
