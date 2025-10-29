@@ -20,6 +20,10 @@ https://docs.python.org/3/library/random.html
 
 ZeroDivisionError - wyjątek zgłaszany, gdy dokonywane jest dzielenie jakiejś liczby przez 0.
 https://docs.python.org/3/library/exceptions.html#ZeroDivisionError
+
+Link do github: https://github.com/Aksymand1/WSB-Python/tree/main/zadanie_1
+Zadanie przesłane 12 października 2025r.
+29.10.2025 dodano link do github
 """
 
 # Przykład użycia funkcji zip() i wykorzystanie modułu random do wygenerowania dwóch list o różnych długościach
