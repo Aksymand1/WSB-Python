@@ -31,14 +31,13 @@ class TestDateFormatConversion(unittest.TestCase):
             "31.10.2021": "2021/10/31",
             "16.03.1998": "1998/03/16"
         }
-    
+        self.invalid_dates = ["2023-12-25", "25.12/2023", "invalid-date", "33-12-2023"]
     def test_convert_date_format(self):
         for input_date, expected_output in self.test_cases.items():
             self.assertEqual(convert_date_format(input_date), expected_output)
     
     def test_invalid_date_format(self):
-        invalid_dates = ["2023-12-25", "25.12/2023", "invalid-date", "33-12-2023"]
-        for date_str in invalid_dates:
+        for date_str in self.invalid_dates:
             self.assertEqual(convert_date_format(date_str), "Niepoprawny format daty")
             
             
