@@ -19,7 +19,10 @@ def palindrom(tekst):
 #     else: 
 #         print(f'Podane wyrażenie: "{tekst}" nie jest palindromem.')
         
-print('\n' + '='* 60 + '\n')
+# print('\n' + '='* 60 + '\n')
+
+
+# ----------------------------------------------------------------------------------------------------------------------------
 
 #Funkcja sprawdzająca poprawność adresu email
 def validate_email(email):
@@ -38,7 +41,10 @@ def validate_email(email):
 #         print(f'Podany adres email: "{email}" jest niepoprawny.')
 
 
-print('\n' + '='* 60 + '\n')
+# print('\n' + '='* 60 + '\n')
+
+
+# ----------------------------------------------------------------------------------------------------------------------------
 
 #Funkcja obliczająca objętość kuli na podstawie promienia
 class Sphere:
@@ -50,12 +56,14 @@ class Sphere:
         volume = (4/3) * pi * (radius ** 3)
         return volume
 
-rad = [3, 5.5, 10, 0.25, 7.8]
-for radius in rad:
-    volume = Sphere.sphere_volume(radius)
-    print(f'Objętość kuli o promieniu {radius} wynosi: {volume:.2f}')
+# rad = [3, 5.5, 10, 0.25, 7.8]
+# for radius in rad:
+#     volume = Sphere.sphere_volume(radius)
+#     print(f'Objętość kuli o promieniu {radius} wynosi: {volume:.2f}')
 
-print('\n' + '='* 60 + '\n')
+# print('\n' + '='* 60 + '\n')
+
+# ----------------------------------------------------------------------------------------------------------------------------
 
 #Funkcja wstawiająca generowane liczby do listy
 def insert_random_numbers(lst):
@@ -66,25 +74,34 @@ def insert_random_numbers(lst):
         print(f"Wstawiam liczbę {lst[wolne_pozycje[pozycja]]} na pozycję {wolne_pozycje[pozycja]}")
         del wolne_pozycje[pozycja]
         
-try:
-    lst = [0] * 20
-    print(f"Lista przed wstawianiem liczb: {lst}")
-    insert_random_numbers(lst)
-    print(f"Lista po wstawieniu liczb: {lst}")
-except Exception as e:
-    print(f"Wystąpił błąd: {e}")
+# try:
+#     lst = [0] * 20
+#     print(f"Lista przed wstawianiem liczb: {lst}")
+#     insert_random_numbers(lst)
+#     print(f"Lista po wstawieniu liczb: {lst}")
+# except Exception as e:
+#     print(f"Wystąpił błąd: {e}")
     
-print('\n' + '='* 60 + '\n')
+# print('\n' + '='* 60 + '\n')
 
-#Funkcja konwertująca daty na inny format
+# ----------------------------------------------------------------------------------------------------------------------------
+
+#Funkcja konwertująca daty na format yyyy/mm/dd
 def convert_date_format(date_str):
     try:
-        day, month, year = date_str.split('-')
-        return f"{year}/{month}/{day}"
+        day, month, year = re.split(r'[-.]', date_str)
+        if int(day) in range(1,32) and int(month) in range(1,13):
+            if int(month) == 2 and int(day) > 29:
+                print("Luty nie może mieć więcej niż 29 dni.")
+            return f"{year}/{month}/{day}"
+        else:
+            return "Niepoprawny format daty"
+        
     except ValueError:
         return "Niepoprawny format daty"
     
-# dates = ["25-12-2023", "01-01-2024", "invalid-date", "15-08-2023", "31-10-2023"]
+# dates = ["25-12-2023", "01-01-2024", "invalid-date", "15-08-2023", "31-10-2023", "16.03.1998", "33.12.2023", "30-02-2020"]
 # for date in dates:
 #     converted_date = convert_date_format(date)
 #     print(f'{converted_date}')
+    
