@@ -1,10 +1,12 @@
+# zadanie_2/test_app.py 
+# Laboratorium Programowanie Zaawansowane
+
 import unittest
 from app import validate_email
 from app import convert_date_format
 from app import insert_random_numbers
 from app import palindrom
 from app import Sphere
-
 
 class TestValidateEmail(unittest.TestCase):
     @classmethod
