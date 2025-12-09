@@ -7,8 +7,6 @@ from text_processing import licz_slowa, snake_to_camel
 print("my_awesome_lib załadowana pomyślnie.")
 
 __version__ = "1.0"
-__author__ = "Paweł Kowalski"
-__nr_albumu__ = "167013"
 __all__ = [
     "usun_duplikaty",
     "ListProcessor",
