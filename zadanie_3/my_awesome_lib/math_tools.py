@@ -2,7 +2,7 @@
 """Moduł math_tools.py zawierający przykładowe narzędzia matematyczne."""
 
 def suma_cyfr_liczby(number: int) -> int:
-    """Funkcja zwraca sumę cyfr podanej liczby całkowitej."""
+    """Funkcja zwraca sumę cyfr podanej liczby całkowitej nieujemnej."""
     sum = 0
     while number > 0:
         sum += number % 10
