@@ -1,0 +1,9 @@
+toml
+[project]
+name = "my_awesome_lib"
+version = "1.0"
+description = "my_awesome_lib lab 3"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["my_awesome_lib"]
