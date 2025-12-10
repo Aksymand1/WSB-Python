@@ -18,6 +18,9 @@ Prosta biblioteka demonstracyjna do laboratorium „Tworzenie własnej bibliotek
 - `licz_slowa(tekst: str)` – zwraca liczbę słów w podanym tekście
 - `snake_to_camel(tekst: str)` – konwertuje tekst z formatu snake_case na CamelCase
 
+## Link do repozytorium GitHub
+- https://github.com/Aksymand1/WSB-Python/tree/main/zadanie_3
+
 ## Instalacja
 
 bash

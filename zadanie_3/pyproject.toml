@@ -7,3 +7,4 @@ requires-python = ">=3.10"
 
 [tool.setuptools]
 packages = ["my_awesome_lib"]
+link = https://github.com/Aksymand1/WSB-Python/tree/main/zadanie_3
