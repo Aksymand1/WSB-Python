@@ -20,5 +20,5 @@ Prosta biblioteka demonstracyjna do laboratorium „Tworzenie własnej bibliotek
 
 ## Instalacja
 
-```bash
+bash
 pip install -e .
