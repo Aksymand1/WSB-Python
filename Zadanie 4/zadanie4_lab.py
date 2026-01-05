@@ -27,7 +27,7 @@ topsis = TOPSIS()
 topsis_scores = topsis(decision_matrix, weights, criteria_types)
 
 # Metoda SPOTIS
-bounds = np.array([[decision_matrix[:, 0].min(), decision_matrix[:,0].max()],
+bounds = np.array([[decision_matrix[:, 0].min(), decision_matrix[:,0].max()], # wartości min i max z 1 kolumny, poniżej tak samo dla pozostałych 
                   [decision_matrix[:, 1].min(), decision_matrix[:,1].max()],
                   [decision_matrix[:, 2].min(), decision_matrix[:,2].max()],
                   [decision_matrix[:, 3].min(), decision_matrix[:,3].max()]]
