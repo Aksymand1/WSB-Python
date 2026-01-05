@@ -10,7 +10,7 @@ from pymcdm.normalizations import minmax_normalization
 import matplotlib.pyplot as plt
 
 
-# Przykładowa macierz decyzyjna dla TOPSIS
+# Macierz decyzyjna
 decision_matrix = np.array([
     [420, 5, 2, 4],
     [340, 3, 1, 3],
@@ -18,11 +18,15 @@ decision_matrix = np.array([
     [125, 2, 7, 3]
 ])
 
+# Wagi
 weights = np.array([0.4, 0.3, 0.2, 0.1]) # Wagi kryteriów - suma równa się 1
+
+# Kryteria
 criteria_types = np.array([1, -1, 1, -1]) # 1 - kryterium maksymalizowane, -1 - kryterium minimalizowane
 
 normalized_matrix = minmax_normalization(decision_matrix) # normalizacja danych
 
+# Metoda TOPSIS
 topsis = TOPSIS()
 topsis_scores = topsis(decision_matrix, weights, criteria_types)
 
