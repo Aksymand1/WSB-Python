@@ -3,7 +3,6 @@
 # https://github.com/Aksymand1/WSB-Python/tree/main/Zadanie%204
 # Link do repozytorium GitHub.
 
-
 import numpy as np
 import pandas as pd
 from pymcdm.methods import TOPSIS, SPOTIS, VIKOR
@@ -13,12 +12,11 @@ import matplotlib.pyplot as plt
 
 # Przykładowa macierz decyzyjna dla TOPSIS
 decision_matrix = np.array([
-    [300, 4, 2, 4],
-    [200, 3, 1, 3],
-    [150, 2, 3, 2],
-    [100, 1, 4, 1]
+    [420, 5, 2, 4],
+    [340, 3, 1, 3],
+    [275, 1, 6, 2],
+    [125, 2, 7, 3]
 ])
-
 
 weights = np.array([0.4, 0.3, 0.2, 0.1]) # Wagi kryteriów - suma równa się 1
 criteria_types = np.array([1, -1, 1, -1]) # 1 - kryterium maksymalizowane, -1 - kryterium minimalizowane
@@ -28,46 +26,20 @@ normalized_matrix = minmax_normalization(decision_matrix) # normalizacja danych
 topsis = TOPSIS()
 topsis_scores = topsis(decision_matrix, weights, criteria_types)
 
-# Przykładowa macierz decyzyjna dla SPOTIS
-decision_matrix_spotis = np.array([
-    [9000, 16],
-    [8400, 15],
-    [7200, 6],
-    [6400, 5]
-])
-
-bounds = np.array([
-    [6400, 9000], 
-    [4, 19]        
-])
-
-weights_spotis = np.array([0.55, 0.45])
-criteria_types_spotis = np.array([1, -1]) 
+# Metoda SPOTIS
+bounds = np.array([[decision_matrix[:, 0].min(), decision_matrix[:,0].max()],
+                  [decision_matrix[:, 1].min(), decision_matrix[:,1].max()],
+                  [decision_matrix[:, 2].min(), decision_matrix[:,2].max()],
+                  [decision_matrix[:, 3].min(), decision_matrix[:,3].max()]]
+                  )
 
 spotis = SPOTIS(bounds)
-
-spotis_scores = spotis(
-    decision_matrix_spotis,
-    weights_spotis,
-    criteria_types_spotis
-)
+spotis_scores = spotis(decision_matrix, weights, criteria_types)
+ 
  
 # Metoda VIKOR
-# Przykładowa macierz decyzyjna dla VIKOR
-decision_matrix_vikor = np.array([
-    [7, 9, 9, 8],
-    [8, 7, 8, 9],
-    [9, 6, 7, 6],
-    [6, 8, 6, 7]
-])
-weights_vikor = np.array([0.15, 0.45, 0.15, 0.25])
-criteria_types_vikor = np.array([1, 1, 1, -1])
 vikor = VIKOR()
-vikor_scores = vikor(
-    decision_matrix_vikor,
-    weights_vikor,
-    criteria_types_vikor
-) 
+vikor_scores = vikor(decision_matrix, weights, criteria_types) 
 
 # Wyświetlenie wyników w formacie DataFrame
 alternatives = ['A1', 'A2', 'A3', 'A4']
