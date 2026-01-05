@@ -36,7 +36,6 @@ bounds = np.array([[decision_matrix[:, 0].min(), decision_matrix[:,0].max()], # 
 spotis = SPOTIS(bounds)
 spotis_scores = spotis(decision_matrix, weights, criteria_types)
  
- 
 # Metoda VIKOR
 vikor = VIKOR()
 vikor_scores = vikor(decision_matrix, weights, criteria_types) 
