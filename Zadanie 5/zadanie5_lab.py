@@ -1,6 +1,6 @@
 # Programowanie Zaawansowane, Laboratorium 5: Poszukiwanie bibliotek o określonej funkcjonalności
 # Celem jest zapoznanie się z wybranymi bibliotekami Pythona oraz przedstawienie działania wybranych funkcjonalności.
-# https://github.com/Aksymand1/WSB-Python/tree/main/Zadanie%204
+# https://github.com/Aksymand1/WSB-Python/tree/main/Zadanie%205
 # Link do repozytorium GitHub.
 
 """Przykładowe funkcjonalności biblioteki Scapy w Pythonie."""
