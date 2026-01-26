@@ -14,6 +14,7 @@ from scapy.packet import Packet
 ip_address = get_if_addr(conf.iface)
 print(f"Twój adres IPv4: {ip_address}")
 
+# Pobranie adresu MAC interfejsu sieciowego
 mac_address = get_if_hwaddr(conf.iface)
 print(f"Twój adres MAC: {mac_address}")
 
