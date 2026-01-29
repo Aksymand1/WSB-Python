@@ -40,7 +40,7 @@ print(f"Status odpowiedzi: {status_code}") # Sprawdzenie statusu odpowiedzi
 if status_code == 200:
     naglowki = result.headers
     print(f"\nZawartość nagłówków odpowiedzi HTTP:")
-    for header, value in naglowki.items():
+    for header, value in naglowki.items(): # Wyświetlenie nagłówków odpowiedzi HTTP
         print(f"{header}: {value}")
 
     document = BeautifulSoup(result.text, "html.parser")
@@ -48,8 +48,8 @@ if status_code == 200:
     tytul_strony = document.title.string
     print(f"\nTytuł strony: {tytul_strony}")
     
-    dane = document.find_all("div", class_= lambda value: value and "hotsongs" in value)
+    dane = document.find_all("div", class_= lambda value: value and "hotsongs" in value) # Wyszukanie klasy kontenera z piosenkami
     
     piosenki = dane[0].find_all("a")
-    for i, piosenka in enumerate(piosenki, start = 1):
+    for i, piosenka in enumerate(piosenki, start = 1): # Wyświetlanie tytułów piosenek
         print(f"Piosenka nr {i}: {piosenka.string}")
