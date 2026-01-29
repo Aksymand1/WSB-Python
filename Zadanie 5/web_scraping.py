@@ -3,7 +3,7 @@
 # https://github.com/Aksymand1/WSB-Python/tree/main/Zadanie%205
 # Link do repozytorium GitHub.
 
-"""Przykłady Web Scraping w Pythonie"""
+"""Proste przykłady Web Scraping w Pythonie"""
 import requests
 from bs4 import BeautifulSoup
 import os
@@ -29,7 +29,27 @@ for i, p in enumerate(p_tags, start = 1): # Wyświetlenie zawartości każego ta
 
 # -------------------- Testy na zewnętrznej stronie www --------------------------
 
-url = "https://www.mediaexpert.pl/komputery-i-tablety/podzespoly-komputerowe/pamieci-ram/pamiec-ram-goodram-irdm-32gb-2x16gb-ddr5-6000mt-s-cl30"
+print("\n--- Testy na zewnętrznej stronie www ---\n")
+
+url = "https://www.azlyrics.com/"
 
 result = requests.get(url)
-print(f"Status odpowiedzi: {result.status_code}") # Sprawdzenie statusu odpowiedzi
+status_code = result.status_code
+print(f"Status odpowiedzi: {status_code}") # Sprawdzenie statusu odpowiedzi
+
+if status_code == 200:
+    naglowki = result.headers
+    print(f"\nZawartość nagłówków odpowiedzi HTTP:")
+    for header, value in naglowki.items():
+        print(f"{header}: {value}")
+
+    document = BeautifulSoup(result.text, "html.parser")
+    
+    tytul_strony = document.title.string
+    print(f"\nTytuł strony: {tytul_strony}")
+    
+    dane = document.find_all("div", class_= lambda value: value and "hotsongs" in value)
+    
+    piosenki = dane[0].find_all("a")
+    for i, piosenka in enumerate(piosenki, start = 1):
+        print(f"Piosenka nr {i}: {piosenka.string}")
